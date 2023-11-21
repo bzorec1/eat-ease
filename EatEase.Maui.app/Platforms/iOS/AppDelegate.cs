@@ -1,9 +1,0 @@
-﻿using Foundation;
-
-namespace EatEase.Maui.app;
-
-[Register("AppDelegate")]
-public class AppDelegate : MauiUIApplicationDelegate
-{
-    protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
-}
