@@ -8,7 +8,7 @@ Eatease aims to enhance the lunchtime experience for groups of people working to
 
 - **Create and Join Groups:**
   - Users can create or join lunch groups with their colleagues or friends.
-  
+
 - **Decision-Making:**
   - Group members can vote on restaurant choices and lunchtime, facilitating a collaborative decision-making process.
 
