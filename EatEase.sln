@@ -1,17 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-#
+# 
 VisualStudioVersion = 17.5.002.0
-MinimumVisualStudioVersion =
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Blazor.Web", "EatEase.Blazor.Web\EatEase.Blazor.Web.csproj", "{019BE831-BBE8-4929-9715-0835ED23454E}"
+MinimumVisualStudioVersion = 
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Blazor.Web", "src\EatEase.Blazor.Web\EatEase.Blazor.Web.csproj", "{019BE831-BBE8-4929-9715-0835ED23454E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Domain", "EatEase.Domain\EatEase.Domain.csproj", "{C61D3ABF-A816-465A-9A5C-FFBD5A2D0823}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Domain", "src\EatEase.Domain\EatEase.Domain.csproj", "{C61D3ABF-A816-465A-9A5C-FFBD5A2D0823}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Application", "EatEase.Application\EatEase.Application.csproj", "{64BE1E49-21F3-44EE-882F-CB530C0C9A17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Application", "src\EatEase.Application\EatEase.Application.csproj", "{64BE1E49-21F3-44EE-882F-CB530C0C9A17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Infrastructure", "EatEase.Infrastructure\EatEase.Infrastructure.csproj", "{F7367501-95A7-49EA-B5A0-AFD49F96972A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Infrastructure", "src\EatEase.Infrastructure\EatEase.Infrastructure.csproj", "{F7367501-95A7-49EA-B5A0-AFD49F96972A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Mobile", "EatEase.Mobile\EatEase.Mobile.csproj", "{19381962-4793-4F41-BA9D-2D138C137604}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Mobile", "src\EatEase.Mobile\EatEase.Mobile.csproj", "{19381962-4793-4F41-BA9D-2D138C137604}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0B0EDA6A-9DBE-472F-8A38-F7D49A5FB938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.UnitTests", "tests\EatEase.UnitTests\EatEase.UnitTests.csproj", "{E302DB51-0A55-411D-A7AD-C70D9F4C5FFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +43,15 @@ Global
 		{19381962-4793-4F41-BA9D-2D138C137604}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19381962-4793-4F41-BA9D-2D138C137604}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19381962-4793-4F41-BA9D-2D138C137604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E302DB51-0A55-411D-A7AD-C70D9F4C5FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E302DB51-0A55-411D-A7AD-C70D9F4C5FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E302DB51-0A55-411D-A7AD-C70D9F4C5FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E302DB51-0A55-411D-A7AD-C70D9F4C5FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E302DB51-0A55-411D-A7AD-C70D9F4C5FFD} = {0B0EDA6A-9DBE-472F-8A38-F7D49A5FB938}
 	EndGlobalSection
 EndGlobal
