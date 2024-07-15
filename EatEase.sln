@@ -8,14 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A70BC14F-1635-46E5-8876-04AADC12747E}"
 	ProjectSection(SolutionItems) = preProject
 		docs\Design\20d98b8a-7608-4229-8d33-8e004d66b099_upscaled.png = docs\Design\20d98b8a-7608-4229-8d33-8e004d66b099_upscaled.png
-		docs\Design\7472343d-66a3-49fa-8e20-eb0e172763e6_upscaled.png = docs\Design\7472343d-66a3-49fa-8e20-eb0e172763e6_upscaled.png
-		docs\Design\7b4cddde-8b98-4da7-ae8b-5d706f0b7d96_upscaled.png = docs\Design\7b4cddde-8b98-4da7-ae8b-5d706f0b7d96_upscaled.png
-		docs\Design\8231fae3-c28f-4e3d-8000-24d297c5e934_upscaled.png = docs\Design\8231fae3-c28f-4e3d-8000-24d297c5e934_upscaled.png
-		docs\Design\87fbad54-4f34-4a48-a8d5-8a8326931499_upscaled.png = docs\Design\87fbad54-4f34-4a48-a8d5-8a8326931499_upscaled.png
-		docs\Design\9ce7f693-dac2-425a-b14c-f5b722c056bb_upscaled.png = docs\Design\9ce7f693-dac2-425a-b14c-f5b722c056bb_upscaled.png
-		docs\Design\cdf37667-b22d-462f-9faf-f4c55d5623c4.png = docs\Design\cdf37667-b22d-462f-9faf-f4c55d5623c4.png
-		docs\Design\e10fd83d-f5d5-4028-a9eb-a90cb90730e4_upscaled.png = docs\Design\e10fd83d-f5d5-4028-a9eb-a90cb90730e4_upscaled.png
-		docs\Design\e40cef2f-2cf7-462c-a084-3a36aa417121_upscaled.png = docs\Design\e40cef2f-2cf7-462c-a084-3a36aa417121_upscaled.png
 		docs\DomainModel.md = docs\DomainModel.md
 		docs\PRESENTATION.md = docs\PRESENTATION.md
 		Group.md = Group.md
