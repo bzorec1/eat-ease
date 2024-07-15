@@ -1,3 +1,4 @@
+
 # DOMAIN MODEL
 
 ```json
