@@ -33,7 +33,6 @@ body {
 
 /* Header */
 header {
-    background: var(--dark-main);
     padding: 20px 30px; /* Increased padding for top and sides */
     display: flex;
     justify-content: space-between;
@@ -150,6 +149,7 @@ header .sign-up {
     cursor: pointer;
     border-radius: 5px;
     display: inline-block;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3); /* Shadow for better visibility */
 }
 
 header .sign-up:hover {
@@ -160,7 +160,21 @@ header .sign-up:hover {
 /* Create Event Button */
 header .create-event {
     background-color: var(--vibrant-orange); /* Highlight color */
-    color: var(--button-text-color);
+    color: var(--text-color); /* Text color */
+    border: none; /* Remove border */
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    font-size: 1rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3); /* Shadow for better visibility */
+}
+
+/* Focus State */
+button.create-event:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5); /* Shadow for better visibility */
 }
 
 header .create-event:hover {
@@ -182,19 +196,6 @@ header .action-buttons {
 .burger i {
     color: var(--text-color);
     font-size: 1.5rem;
-}
-
-/* Create Event Button */
-button.create-event {
-    background-color: var(--vibrant-orange); /* Highlight color */
-    color: var(--text-color); /* Text color */
-    border: none; /* Remove border */
-    padding: 15px 30px; /* Larger padding for a bigger button */
-    font-size: 1rem; /* Increase font size */
-    font-weight: bold; /* Make the text bold */
-    border-radius: 8px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
 /* Hover Effect */
