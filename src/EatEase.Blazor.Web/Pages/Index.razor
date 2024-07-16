@@ -1,53 +1,36 @@
 ﻿@page "/"
 
 @code {
+
+    // TODO:bzore inject the interopJs to call the scroll-indicator js for dynamic change
     public string UserName { get; } = "User1";
 }
 
-<div class="container">
-    <div class="hero-section section" id="hero">
-        <h1>Welcome, @UserName!</h1>
-        <button class="cta-button">Explore Events</button>
-    </div>
-
-    <div class="dashboard-overview section" id="dashboard">
-        <div class="upcoming-events">
-            <h2>Upcoming Events</h2>
-            <!-- Event details here -->
-        </div>
-        <div class="recent-activities-links">
-            <h2>Recent Activities</h2>
-            <!-- Activities here -->
-            <h2>Quick Links</h2>
-            <!-- Links here -->
-        </div>
-    </div>
-
-    <div class="social-feed-timeline section">
-        <div class="community-feed" id="community">
-            <h2>Community Feed</h2>
-            <!-- Feed items here -->
-        </div>
-        <div class="friend-activities" id="friend-activities">
-            <h2>Friend Activities</h2>
-            <!-- Friend activities here -->
-        </div>
-    </div>
+<div class="scroll-indicator">
+    <a href="#hero" class="active" data-section="Hero"></a>
+    <a href="#dashboard" data-section="Dashboard"></a>
+    <a href="#friends-timeline" data-section="Friends Timeline"></a>
+    <a href="#community" data-section="Community"></a>
 </div>
 
-<div class="vertical-nav">
-    <ul>
-        <li>
-            <a href="#hero" class="dot active"></a>
-        </li>
-        <li>
-            <a href="#dashboard" class="dot"></a>
-        </li>
-        <li>
-            <a href="#community" class="dot"></a>
-        </li>
-        <li>
-            <a href="#friend-activities" class="dot"></a>
-        </li>
-    </ul>
-</div>
+<section id="hero">
+    <div class="wrapper">
+        Welcome, @UserName!
+    </div>
+</section>
+
+<section id="dashboard">
+    <div class="wrapper">
+        Dashboard
+    </div>
+</section>
+<section id="friends-timeline">
+    <div class="wrapper">
+        Friends Timeline
+    </div>
+</section>
+<section id="community">
+    <div class="wrapper">
+        Community
+    </div>
+</section>

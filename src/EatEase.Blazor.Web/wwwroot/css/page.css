@@ -1,0 +1,102 @@
+:root {
+    --dark-main: #1e1e1e; /* 60%: Dark Main Color */
+    --dark-gray: #2c2c2c; /* Gradient shades */
+    --light-dark-gray: #383838;
+
+    --dark-orange: #d35400; /* 30%: Accent Color */
+    --medium-orange: #e67e22;
+    --light-orange: #f39c12;
+
+    --vibrant-orange: #f97316; /* 10%: Highlight Color */
+    --subdued-gray: #333; /* Subdued color for non-highlighted buttons */
+
+    --text-color: white;
+    --button-bg-color: var(--subdued-gray);
+    --button-hover-bg-color: var(--vibrant-orange);
+    --button-text-color: white;
+    --error-background: #b32121; /* Error background color */
+    --error-icon-background: var(--dark-orange);
+    --error-text-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: linear-gradient(to bottom, var(--dark-main), var(--dark-gray), var(--light-dark-gray));
+
+}
+
+body {
+    margin: 0;
+    font-family: "JetBrains Mono", sans-serif;
+}
+
+section {
+    height: 100dvh;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+section:nth-of-type(even) {
+}
+
+section .wrapper {
+    max-width: 1200px;
+    padding: 32px;
+    margin: 0 auto;
+}
+
+.scroll-indicator {
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.scroll-indicator a {
+    padding: 10px;
+    position: relative;
+}
+
+.scroll-indicator a::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--text-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scroll-indicator a.active::after {
+    background: var(--dark-orange);
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.scroll-indicator a::before {
+    content: attr(data-section);
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translate(4px, -50%);
+    background: var(--dark-orange);
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 2px 16px;
+    text-transform: uppercase;
+    font-size: 13px;
+    pointer-events: none;
+    box-shadow: 0 7px 14px -6px rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: all 400ms ease;
+}
+
+.scroll-indicator a:hover::before {
+    opacity: 1;
+    transform: translate(0%, -50%);
+}

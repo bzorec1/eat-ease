@@ -14,35 +14,38 @@ burger.addEventListener('click', function () {
     toggleNav();
 });
 
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('.vertical-nav .dot');
+window.jsInterop = {
+    scrollIndicator: function () {
+        const dots = document.querySelectorAll(".scroll-indicator a");
 
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
-            link.classList.add('active');
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            window.scrollTo({
-                top: targetSection.offsetTop, behavior: 'smooth'
+        const removeActiveClass = () => {
+            dots.forEach(dot => {
+                dot.classList.remove("active")
             });
+        };
+
+        const addActiveClass = (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    console.log(entry.target);
+                    let current = document.querySelector(
+                        `.scroll-indicator a[href='#${entry.target.id}']`
+                    );
+                    removeActiveClass();
+                    current.classList.add("active");
+                }
+            })
+        };
+
+        const options = {
+            threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver(addActiveClass, options);
+        const sections = document.querySelectorAll("section");
+
+        sections.forEach((section) => {
+            observer.observe(section);
         });
-    });
-
-    window.addEventListener('scroll', () => {
-        const scrollPos = window.scrollY + window.innerHeight / 2;
-
-        links.forEach(link => {
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection.offsetTop <= scrollPos && targetSection.offsetTop + targetSection.offsetHeight > scrollPos) {
-                document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
-                link.classList.add('active');
-            }
-        });
-    });
-});
+    }
+}

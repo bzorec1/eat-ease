@@ -11,16 +11,16 @@
         {
             <ul class="nav">
                 <li class="nav-link">
-                    <a href="#" class="active">Homepage</a>
+                    <NavLink href="/" Match="NavLinkMatch.All" ActiveClass="active">Homepage</NavLink>
                 </li>
                 <li class="nav-link">
-                    <a href="#">My Groups</a>
+                    <NavLink href="/groups" Match="NavLinkMatch.All" ActiveClass="active">My Groups</NavLink>
                 </li>
                 <li class="nav-link">
-                    <a href="#">My Events</a>
+                    <NavLink href="/events" Match="NavLinkMatch.All" ActiveClass="active">My Events</NavLink>
                 </li>
                 <li class="nav-link">
-                    <a href="#">Profile</a>
+                    <NavLink href="/profile" Match="NavLinkMatch.All" ActiveClass="active">Profile</NavLink>
                 </li>
                 <li class="nav-link">
                     <a href="#">Log Out</a>
@@ -29,20 +29,18 @@
         }
         else
         {
-            <ul class="nav">
-                <li class="nav-link">
-                    <a href="#" class="active">Homepage</a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">Groups</a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">Events</a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">About Us</a>
-                </li>
-            </ul>
+            <li class="nav-link">
+                <NavLink href="/" Match="NavLinkMatch.All" ActiveClass="active">Homepage</NavLink>
+            </li>
+            <li class="nav-link">
+                <NavLink href="/groups" Match="NavLinkMatch.All" ActiveClass="active">Groups</NavLink>
+            </li>
+            <li class="nav-link">
+                <NavLink href="/events" Match="NavLinkMatch.All" ActiveClass="active">Events</NavLink>
+            </li>
+            <li class="nav-link">
+                <NavLink href="/about" Match="NavLinkMatch.All" ActiveClass="active">About Us</NavLink>
+            </li>
         }
     </div>
     <div class="action-buttons">
