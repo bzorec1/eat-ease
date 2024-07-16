@@ -27,3 +27,11 @@ jobs:
         dotnet-version: 8.0.x
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1.0.2
+- name: Restore dependencies
+      run: dotnet restore
+
+    - name: Clean
+      run: dotnet clean
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
