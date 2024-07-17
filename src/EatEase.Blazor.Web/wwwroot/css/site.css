@@ -20,13 +20,20 @@
     --error-text-color: white;
 }
 
+main{
+    min-height: 100vh;
+}
+
 /* Header */
 header {
-    padding: 20px 30px; /* Increased padding for top and sides */
+    background: var(--dark-main);
+    position: sticky;
+    top: 0;
+    padding: 20px 30px; /* Adjust the padding as needed */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    z-index: 1000; /* Ensure the header is above other elements */
 }
 
 /* Header Left - Logo and Navigation */
@@ -205,6 +212,10 @@ footer {
     padding: 10px;
     text-align: center;
     color: var(--text-color);
+    position: sticky;
+    bottom: 0;
+    z-index: 1000; /* Ensure the footer is above other elements */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 /* Responsive Design */
