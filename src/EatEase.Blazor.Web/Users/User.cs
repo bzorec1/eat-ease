@@ -1,8 +1,8 @@
-namespace EatEase.Domain.Users;
+namespace EatEase.Blazor.Web.Users;
 
 public class User
 {
-    public Guid Id { get; private set; }
-    public string Name { get; private set; } = null!;
-    public string Surname { get; private set; } = null!;
+    public Guid Id { get; set; }
+    public string Name { get; set; } = null!;
+    public string Surname { get; set; } = null!;
 }

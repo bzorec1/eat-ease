@@ -1,16 +1,17 @@
-using System.Text.RegularExpressions;
-using EatEase.Domain.Expenses;
+using EatEase.Blazor.Web.Expenses;
+using EatEase.Blazor.Web.Groups;
 
-namespace EatEase.Domain.Events;
+namespace EatEase.Blazor.Web.Events;
 
 public class Event
 {
-    public Guid Id { get; private set; }
-    public EventType EventType { get; private set; }
-    public DateTime EventDateTime { get; private set; }
-    public string Location { get; private set; } = null!;
-    public EventStatus Status { get; private set; }
-    public Guid GroupId { get; private set; }
-    public Group Group { get; private set; } = null!;
-    public List<Expense> Expenses { get; private set; } = new List<Expense>();
+    public Guid Id { get; set; }
+    public EventType EventType { get; set; }
+    public DateTime EventDateTime { get; set; }
+    public string Location { get; set; } = null!;
+    public EventStatus Status { get; set; }
+    public Guid GroupId { get; set; }
+    public Group Group { get; set; } = null!;
+    public List<Expense> Expenses { get; set; } = new List<Expense>();
+    public string Name { get; set; } = null!;
 }

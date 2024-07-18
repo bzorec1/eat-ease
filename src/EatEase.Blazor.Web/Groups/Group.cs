@@ -1,21 +1,21 @@
-using EatEase.Domain.Events;
-using EatEase.Domain.Users;
+using EatEase.Blazor.Web.Events;
+using EatEase.Blazor.Web.Users;
 
-namespace EatEase.Domain.Groups;
+namespace EatEase.Blazor.Web.Groups;
 
 public record Group(Guid Id, Guid GroupManagerId)
 {
-    public Guid Id { get; private set; } = Id;
+    public Guid Id { get; set; } = Id;
 
-    public string Name { get; private set; } = null!;
+    public string Name { get; set; } = null!;
 
-    public string Description { get; private set; } = null!;
+    public string Description { get; set; } = null!;
 
-    public List<string> LocationPreferences { get; private set; } = null!;
+    public List<string> LocationPreferences { get; set; } = null!;
 
-    public Guid GroupManagerId { get; private set; } = GroupManagerId;
+    public Guid GroupManagerId { get; set; } = GroupManagerId;
 
-    public List<Event> Events { get; private set; } = new List<Event>();
+    public List<Event> Events { get; set; } = new List<Event>();
 
-    public List<User> Members { get; private set; } = new List<User>();
+    public List<User> Members { get; set; } = new List<User>();
 }

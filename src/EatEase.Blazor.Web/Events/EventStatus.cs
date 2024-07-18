@@ -1,4 +1,4 @@
-namespace EatEase.Domain.Events;
+namespace EatEase.Blazor.Web.Events;
 
 public enum EventStatus
 {

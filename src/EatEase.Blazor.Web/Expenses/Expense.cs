@@ -1,7 +1,7 @@
-using EatEase.Domain.Events;
-using EatEase.Domain.Users;
+using EatEase.Blazor.Web.Events;
+using EatEase.Blazor.Web.Users;
 
-namespace EatEase.Domain.Expenses;
+namespace EatEase.Blazor.Web.Expenses;
 
 public class Expense
 {
