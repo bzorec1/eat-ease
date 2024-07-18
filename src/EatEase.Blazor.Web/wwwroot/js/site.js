@@ -14,38 +14,20 @@ burger.addEventListener('click', function () {
     toggleNav();
 });
 
-window.jsInterop = {
-    scrollIndicator: function () {
-        const dots = document.querySelectorAll(".scroll-indicator a");
-
-        const removeActiveClass = () => {
-            dots.forEach(dot => {
-                dot.classList.remove("active")
-            });
-        };
-
-        const addActiveClass = (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    console.log(entry.target);
-                    let current = document.querySelector(
-                        `.scroll-indicator a[href='#${entry.target.id}']`
-                    );
-                    removeActiveClass();
-                    current.classList.add("active");
-                }
-            })
-        };
-
-        const options = {
-            threshold: 0.5,
-        };
-
-        const observer = new IntersectionObserver(addActiveClass, options);
-        const sections = document.querySelectorAll("section");
-
-        sections.forEach((section) => {
-            observer.observe(section);
+function registerSectionObserver() {
+    document.querySelectorAll("section")
+        .forEach((section) => {
+            new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        console.log(entry.target);
+                        let current = document.querySelector(`.scroll-indicator a[href='#${entry.target.id}']`);
+                        document.querySelectorAll(".scroll-indicator a").forEach(dot => {
+                            dot.classList.remove("active")
+                        });
+                        current.classList.add("active");
+                    }
+                })
+            }, {threshold: 0.5}).observe(section);
         });
-    }
 }

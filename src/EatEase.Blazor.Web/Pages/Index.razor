@@ -1,10 +1,6 @@
 ﻿@page "/"
-
-@code {
-
-    // TODO:bzore inject the interopJs to call the scroll-indicator js for dynamic change
-    public string UserName { get; } = "Blaž Zorec";
-}
+@inject IJSRuntime jsRuntime
+@implements IAsyncDisposable
 
 <div class="scroll-indicator">
     <a href="#hero" class="active" data-section="Hero"></a>
@@ -54,3 +50,22 @@
         Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus scelerisque sapien erat, sit amet tristique dui posuere sed. Duis vitae purus id est ullamcorper aliquet. Ut feugiat, erat ac malesuada pretium, orci justo venenatis purus, at vehicula ante ante eu lectus. Maecenas eu odio metus. Integer blandit egestas sem, ac ultricies ligula facilisis sit amet. Vestibulum ornare libero nec iaculis dapibus.
     </div>
 </section>
+
+@code {
+
+    public string UserName { get; } = "Blaž Zorec";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await jsRuntime.InvokeVoidAsync("registerSectionObserver", CancellationToken.None);
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        await Task.CompletedTask;
+    }
+
+}
