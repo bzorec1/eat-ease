@@ -1,4 +1,4 @@
-namespace EatEase.Blazor.Web.Expenses;
+namespace EatEase.Contracts;
 
 public enum ExpenseCategory
 {

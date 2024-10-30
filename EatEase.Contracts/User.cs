@@ -1,4 +1,4 @@
-namespace EatEase.Blazor.Web.Users;
+namespace EatEase.Contracts;
 
 public class User
 {

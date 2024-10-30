@@ -1,7 +1,4 @@
-using EatEase.Blazor.Web.Events;
-using EatEase.Blazor.Web.Users;
-
-namespace EatEase.Blazor.Web.Groups;
+namespace EatEase.Contracts;
 
 public record Group(Guid Id, Guid GroupManagerId)
 {
