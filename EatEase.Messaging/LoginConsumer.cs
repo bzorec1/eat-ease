@@ -9,39 +9,36 @@ namespace EatEase.Messaging;
 // TODO use the signInManager by microsoft
 public partial class LoginConsumer : IConsumer<LoginRequest>
 {
+    private readonly UserRepository _repository;
     private readonly ILogger<LoginConsumer> _logger;
-    private readonly PasswordHasher<LoginRequest> _passwordHasher; // TODO use user object??
+    private readonly PasswordHasher<User> _passwordHasher; // TODO use user object??
 
-    public LoginConsumer(ILogger<LoginConsumer> logger, PasswordHasher<LoginRequest> passwordHasher)
+    public LoginConsumer(ILogger<LoginConsumer> logger, PasswordHasher<User> passwordHasher,
+        UserRepository repository)
     {
         _logger = logger;
         _passwordHasher = passwordHasher;
+        _repository = repository;
     }
 
-    public Task Consume(ConsumeContext<LoginRequest> context)
+    public async Task Consume(ConsumeContext<LoginRequest> context)
     {
         var request = context.Message;
-
         _logger.LogInformation("Logging in user {Message}", request);
 
-        // TODO validate the user input
-        // TODO on error respond with error response
-        if (EmailRegex().IsMatch(request.Identifier))
+        var user = (EmailRegex().IsMatch(request.Identifier)
+                       ? await _repository.GetUserByEmailAsync(request.Identifier, context.CancellationToken)
+                       : await _repository.GetUserByUserNameAsync(request.Identifier, context.CancellationToken))
+                   ?? throw new InvalidOperationException();
+
+        var verificationResult = _passwordHasher.VerifyHashedPassword(user, user.Password, request.Password);
+
+        if (verificationResult == PasswordVerificationResult.Failed)
         {
-            string hashedPassword = "";
-            var verificationResult = _passwordHasher.VerifyHashedPassword(request, hashedPassword, request.Password);
-
-            if (verificationResult == PasswordVerificationResult.Failed)
-            {
-                _logger.LogWarning("Invalid password");
-                return Task.CompletedTask;
-            }
-
-            // TODO email login
-            throw new System.NotImplementedException();
+            _logger.LogWarning("Invalid password");
+            return;
         }
 
-        // TODO username login
         // TODO respond with new auth token
         throw new System.NotImplementedException();
     }
