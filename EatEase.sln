@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 #
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Web", "src\EatEase.Web\EatEase.Web.csproj", "{019BE831-BBE8-4929-9715-0835ED23454E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Web", "EatEase.Web\EatEase.Web.csproj", "{019BE831-BBE8-4929-9715-0835ED23454E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A70BC14F-1635-46E5-8876-04AADC12747E}"
 	ProjectSection(SolutionItems) = preProject
