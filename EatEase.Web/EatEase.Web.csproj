@@ -7,11 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MassTransit" Version="8.3.0" />
+      <ProjectReference Include="..\EatEase.Messaging\EatEase.Messaging.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\EatEase.Contracts\EatEase.Contracts.csproj" />
-    </ItemGroup>
-
+    
 </Project>
