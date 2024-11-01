@@ -10,6 +10,7 @@ public sealed class UserRepository
     public UserRepository(UserContext context)
     {
         _context = context;
+        _context.Database.EnsureCreated();
     }
 
     public async Task<User?> GetUserAsync(Guid userId, CancellationToken cancellationToken = default) =>
@@ -20,4 +21,10 @@ public sealed class UserRepository
 
     public async Task<User?> GetUserByUserNameAsync(string username, CancellationToken cancellationToken = default) =>
         await _context.Users.SingleOrDefaultAsync(user => user.Username == username, cancellationToken);
+
+    public async Task AddAsync(User user, CancellationToken cancellationToken = default) =>
+        await _context.Users.AddAsync(user, cancellationToken);
+
+    public async Task<bool> UserExistsAsync(string email, CancellationToken cancellationToken) =>
+        await _context.Users.Where(i => i.Email == email).AnyAsync(cancellationToken);
 }

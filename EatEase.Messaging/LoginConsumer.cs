@@ -6,12 +6,11 @@ using Microsoft.Extensions.Logging;
 
 namespace EatEase.Messaging;
 
-// TODO use the signInManager by microsoft
 public partial class LoginConsumer : IConsumer<LoginRequest>
 {
     private readonly UserRepository _repository;
     private readonly ILogger<LoginConsumer> _logger;
-    private readonly PasswordHasher<User> _passwordHasher; // TODO use user object??
+    private readonly PasswordHasher<User> _passwordHasher;
 
     public LoginConsumer(ILogger<LoginConsumer> logger, PasswordHasher<User> passwordHasher,
         UserRepository repository)
@@ -31,7 +30,16 @@ public partial class LoginConsumer : IConsumer<LoginRequest>
                        : await _repository.GetUserByUserNameAsync(request.Identifier, context.CancellationToken))
                    ?? throw new InvalidOperationException();
 
-        var verificationResult = _passwordHasher.VerifyHashedPassword(user, user.Password, request.Password);
+        if (string.IsNullOrEmpty(request.Password))
+        {
+            _logger.LogWarning("Password is empty.");
+            return;
+        }
+
+        var verificationResult = _passwordHasher.VerifyHashedPassword(
+            user,
+            user.Password ?? throw new InvalidOperationException(),
+            request.Password);
 
         if (verificationResult == PasswordVerificationResult.Failed)
         {

@@ -1,6 +1,8 @@
 ﻿@page "/"
 @inject IJSRuntime JsRuntime
 @using EatEase.Contracts
+@using MassTransit
+@using Event = EatEase.Contracts.Event
 @implements IAsyncDisposable
 
 <div class="scroll-indicator">
@@ -93,6 +95,8 @@
                 new User
                 {
                     Username = "User1",
+                    Id = NewId.NextGuid(),
+                    Email = "email",
                 }
             }
         };

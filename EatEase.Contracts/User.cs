@@ -1,9 +1,12 @@
 namespace EatEase.Contracts;
 
-public class User
+public record User
 {
-    public Guid Id { get; set; }
-    public string Email { get; set; } = null!;
-    public string Username { get; set; } = null!;
-    public string Password { get; set; } = null!;
+    public required Guid Id { get; init; }
+
+    public required string Email { get; init; }
+
+    public required string Username { get; init; }
+
+    public string? Password { get; set; }
 }
