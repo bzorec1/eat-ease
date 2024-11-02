@@ -13,9 +13,13 @@ builder.Services.AddSingleton<PasswordHasher<User>>();
 builder.Services.AddTransient<UserRepository>();
 builder.Services.AddDbContext<UserContext>(options =>
     options.UseInMemoryDatabase("InMemoryAppDb"));
+builder.Services.AddLogging();
 builder.Services.AddMassTransit(configurator =>
 {
-    configurator.UsingInMemory();
+    configurator.UsingInMemory((context, factoryConfigurator) =>
+    {
+        context.ConfigureEndpoints(factoryConfigurator, new KebabCaseEndpointNameFormatter(false));
+    });
 
     configurator.AddConsumer<RegisterConsumer>();
     configurator.AddConsumer<LoginConsumer>();
