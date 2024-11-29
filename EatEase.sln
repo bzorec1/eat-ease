@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 #
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Web", "EatEase.Web\EatEase.Web.csproj", "{019BE831-BBE8-4929-9715-0835ED23454E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.BlazorApp", "EatEase.BlazorApp\EatEase.BlazorApp.csproj", "{019BE831-BBE8-4929-9715-0835ED23454E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A70BC14F-1635-46E5-8876-04AADC12747E}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,9 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A70BC14F-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Contracts", "EatEase.Contracts\EatEase.Contracts.csproj", "{AC408EC5-C81B-48BA-AC26-28162E67E3C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Messaging", "EatEase.Messaging\EatEase.Messaging.csproj", "{B821F3AE-84D9-4B05-81AD-4AAB6124FFC2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Tests", "EatEase.Tests\EatEase.Tests.csproj", "{19308584-02D5-4D00-94EA-DF16D8CB7621}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.UnitTests", "EatEase.UnitTests\EatEase.UnitTests.csproj", "{19308584-02D5-4D00-94EA-DF16D8CB7621}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +31,6 @@ Global
 		{AC408EC5-C81B-48BA-AC26-28162E67E3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC408EC5-C81B-48BA-AC26-28162E67E3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC408EC5-C81B-48BA-AC26-28162E67E3C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B821F3AE-84D9-4B05-81AD-4AAB6124FFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B821F3AE-84D9-4B05-81AD-4AAB6124FFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B821F3AE-84D9-4B05-81AD-4AAB6124FFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B821F3AE-84D9-4B05-81AD-4AAB6124FFC2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19308584-02D5-4D00-94EA-DF16D8CB7621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19308584-02D5-4D00-94EA-DF16D8CB7621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19308584-02D5-4D00-94EA-DF16D8CB7621}.Release|Any CPU.ActiveCfg = Release|Any CPU

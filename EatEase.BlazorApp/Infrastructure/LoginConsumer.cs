@@ -2,9 +2,8 @@ using System.Text.RegularExpressions;
 using EatEase.Contracts;
 using MassTransit;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Logging;
 
-namespace EatEase.Messaging;
+namespace EatEase.BlazorApp.Infrastructure;
 
 public partial class LoginConsumer : IConsumer<LoginRequest>
 {

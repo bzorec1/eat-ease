@@ -1,4 +1,4 @@
-namespace EatEase.Tests;
+namespace EatEase.UnitTests;
 
 public class UnitTest1
 {

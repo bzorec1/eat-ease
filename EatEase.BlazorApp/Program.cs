@@ -1,8 +1,10 @@
 using EatEase.Contracts;
-using EatEase.Messaging;
+using EatEase.BlazorApp.Infrastructure;
 using MassTransit;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using LoginConsumer = EatEase.BlazorApp.Infrastructure.LoginConsumer;
+using RegisterConsumer = EatEase.BlazorApp.Infrastructure.RegisterConsumer;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();

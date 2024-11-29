@@ -1,7 +1,7 @@
 using EatEase.Contracts;
 using Microsoft.EntityFrameworkCore;
 
-namespace EatEase.Messaging;
+namespace EatEase.BlazorApp.Infrastructure;
 
 public sealed class UserRepository
 {
