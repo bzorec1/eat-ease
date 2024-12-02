@@ -21,6 +21,16 @@ public partial class RegisterConsumer : IConsumer<RegisterRequest>
 
     public async Task Consume(ConsumeContext<RegisterRequest> context)
     {
+        if (context.ResponseAddress == null)
+        {
+            throw new ArgumentNullException(nameof(context.ResponseAddress));
+        }
+
+        if (context.RequestId == null)
+        {
+            throw new ArgumentNullException(nameof(context.RequestId));
+        }
+
         var request = context.Message;
 
         _logger.LogInformation("Creating new user {Message}", request);

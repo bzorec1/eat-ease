@@ -20,7 +20,7 @@ builder.Services.AddMassTransit(configurator =>
 {
     configurator.UsingInMemory((context, factoryConfigurator) =>
     {
-        context.ConfigureEndpoints(factoryConfigurator, new KebabCaseEndpointNameFormatter(false));
+        factoryConfigurator.ConfigureEndpoints(context, new KebabCaseEndpointNameFormatter(false));
     });
 
     configurator.AddConsumer<RegisterConsumer>();
