@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 #
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.BlazorApp", "EatEase.BlazorApp\EatEase.BlazorApp.csproj", "{019BE831-BBE8-4929-9715-0835ED23454E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A70BC14F-1635-46E5-8876-04AADC12747E}"
 	ProjectSection(SolutionItems) = preProject
 		docs\Design\20d98b8a-7608-4229-8d33-8e004d66b099_upscaled.png = docs\Design\20d98b8a-7608-4229-8d33-8e004d66b099_upscaled.png
@@ -17,16 +15,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Contracts", "EatEas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.UnitTests", "EatEase.UnitTests\EatEase.UnitTests.csproj", "{19308584-02D5-4D00-94EA-DF16D8CB7621}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Blazor", "EatEase.Blazor\EatEase.Blazor\EatEase.Blazor.csproj", "{F1EAF687-CB27-4746-A8BE-56CAB01C3B24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatEase.Blazor.Client", "EatEase.Blazor\EatEase.Blazor.Client\EatEase.Blazor.Client.csproj", "{E1B9F83A-931D-40C3-A81D-0BE3997688B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devops", "devops", "{B7617502-9B84-4DC2-8646-B6A4A3504799}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{019BE831-BBE8-4929-9715-0835ED23454E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{019BE831-BBE8-4929-9715-0835ED23454E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{019BE831-BBE8-4929-9715-0835ED23454E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{019BE831-BBE8-4929-9715-0835ED23454E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AC408EC5-C81B-48BA-AC26-28162E67E3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AC408EC5-C81B-48BA-AC26-28162E67E3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC408EC5-C81B-48BA-AC26-28162E67E3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,6 +38,14 @@ Global
 		{19308584-02D5-4D00-94EA-DF16D8CB7621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19308584-02D5-4D00-94EA-DF16D8CB7621}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19308584-02D5-4D00-94EA-DF16D8CB7621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1EAF687-CB27-4746-A8BE-56CAB01C3B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EAF687-CB27-4746-A8BE-56CAB01C3B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EAF687-CB27-4746-A8BE-56CAB01C3B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EAF687-CB27-4746-A8BE-56CAB01C3B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B9F83A-931D-40C3-A81D-0BE3997688B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B9F83A-931D-40C3-A81D-0BE3997688B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B9F83A-931D-40C3-A81D-0BE3997688B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B9F83A-931D-40C3-A81D-0BE3997688B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

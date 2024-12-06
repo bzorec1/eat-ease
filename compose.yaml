@@ -1,0 +1,12 @@
+﻿services:
+  eatease.blazor:
+    image: eatease.blazor
+    build:
+      context: .
+      dockerfile: EatEase.Blazor/EatEase.Blazor/Dockerfile
+
+  eatease.blazor.client:
+    image: eatease.blazor.client
+    build:
+      context: .
+      dockerfile: EatEase.Blazor/EatEase.Blazor.Client/Dockerfile

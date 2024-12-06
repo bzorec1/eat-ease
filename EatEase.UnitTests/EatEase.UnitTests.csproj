@@ -28,8 +28,4 @@
         <Using Include="Xunit"/>
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\EatEase.BlazorApp\EatEase.BlazorApp.csproj" />
-    </ItemGroup>
-
 </Project>
